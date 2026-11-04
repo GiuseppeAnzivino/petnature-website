@@ -1,0 +1,119 @@
+:root{
+    --text-color-1: white;
+    --text-color-2: black;
+    --text-color-3: #007BA7;
+}
+
+@keyframes fade-start {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.titolo{
+    width: 100%;
+    position: relative;
+}
+
+.titolo img{
+    width: 100%;
+    box-shadow: 0 8px 6px -6px rgba(0,0,0,0.2);
+}
+
+.titolo .testo{
+    position: absolute;
+    color: var(--text-color-1);
+    font-size: 50px;
+    margin: 10px;
+    text-shadow: 2px 2px 4px black;
+}
+
+.titolo .testo p{
+    margin: 0;
+}
+
+.corpo1,
+.corpo2,
+.corpo3{
+    display: flex;
+    flex-direction: row;
+    padding: 3.3rem;
+    align-items: center;
+}
+
+.corpo1 .testo,
+.corpo3 .testo{
+    color: var(--text-color-2);
+    font-size: 20px;
+    text-align: justify;
+    margin-right: 150px;
+}
+
+.corpo1 h2,
+.corpo2 h2,
+.corpo3 h2{
+    color: var(--text-color-3);
+}
+
+.corpo2 .testo{
+    color: var(--text-color-2);
+    font-size: 20px;
+    text-align: justify;
+    margin-left: 150px;
+}
+
+.corpo1 img,
+.corpo2 img,
+.corpo3 img{
+    height: 300px;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.2);
+    transition: all .40s ease;
+}
+
+.corpo1 img:hover,
+.corpo2 img:hover,
+.corpo3 img:hover{
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 1000px){
+   
+    .titolo .testo{
+        position: absolute;
+        padding: 8px 12px;
+        font-size: 30px;    
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .corpo1,
+    .corpo2,
+    .corpo3{
+        padding: 2.2rem;
+    }
+
+    .corpo1 .testo,
+    .corpo3 .testo{
+        font-size: 12px;
+        margin-right: 30px;
+    }
+
+    .corpo2 .testo{
+        font-size: 12px;
+        margin-left: 30px;
+    }
+
+    .corpo1 img,
+    .corpo2 img,
+    .corpo3 img{
+        width: 50%;
+        height: 50%;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; 
+}
+
+.visible {
+    opacity: 1;
+}

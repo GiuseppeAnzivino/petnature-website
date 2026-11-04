@@ -1,0 +1,269 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+    --text-color-1: black;
+    --text-color-2: white;
+    --bg-color-h1: white;
+    --bg-color-h2: #007BA7;
+    --font-size-low: 1.1rem;
+    --font-size-great:2.2rem;
+}
+
+body{
+    background-color: var(--bg-color-h1);
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden;    
+    animation: fade-start 1.5s ease-in-out forwards;
+}
+
+/*Header homepage*/
+header{
+    background-color:var(--text-color-2);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    box-shadow: 0 8px 6px -6px rgba(0,0,0,0.2);
+}
+
+
+.logo{
+    margin:0;
+    font-size: var(--font-size-great);
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    max-height: 180px;
+	max-width: 180px;
+}
+
+.logo img{
+    height:100%;
+	width: 100%;
+}
+
+
+.titolo{
+    display: flex;
+    flex-direction: column;
+    color: var(--bg-color-h2);
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    flex-grow: 6;
+    margin: 0;
+}
+
+.titolo h1{
+    padding: 0;
+    margin: 0;
+}
+
+.sottotitolo{
+    box-sizing: border-box;
+    color: var(--bg-color-h2);
+    font-weight: bolder;
+    font-size: 25px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.icons{
+    display: block;
+    flex-grow: 1;
+}
+
+.icons i{
+    color: var(--text-color-1);
+    font-size: 24px;
+    margin-left: 15px;
+}
+
+.icons i:hover{
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.text{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+
+/*Section slideshow*/
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    position: relative;
+}
+
+.mySlides video{
+    width: 100%;
+}
+
+.page{
+    text-decoration: none;
+    color: var(--bg-color-h2);
+    display: inline-block;
+    font-size: 50px;
+    font-weight: bold;
+    animation: shadow-out .3s  ease-in-out forwards;
+}
+
+.page:hover{
+    animation: shadow-in .3s  ease-in-out forwards;
+}
+
+.prev, .next {
+    cursor:pointer;
+    position: absolute;
+    top: 50%;
+    color: #717171;
+    font-weight: bold;
+    font-size: 50px;
+    transition: 0.6s ease;
+    border-radius: 10px;
+    border: none;
+    background:none;
+    transform: translateY(-50%);
+}
+
+.freccia{
+    margin-bottom: -5px;
+    margin-top: -10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.numbertext {
+    color: var(--bg-color-h2);
+    font-size: 20px;
+    padding: 8px 12px;
+    position:absolute;
+    z-index: 1;
+}
+
+.pallini{
+    text-align:center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: #717171;
+}
+
+@keyframes shadow-in{
+    from{text-shadow: 0}
+    to{text-shadow: 2px 2px 4px black}
+}
+
+@keyframes shadow-out{
+    from{text-shadow: 2px 2px 4px black}
+    to{text-shadow: 0}
+}
+
+
+/*Fading Animation*/
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade-start{
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@media(max-width: 840px){
+    
+    /*Header*/
+    .logo img{
+        height: 60px;
+    }
+
+    .titolo{
+        font-size: 20px;
+    }
+
+    .sottotitolo{
+        font-size: 12px;
+    }
+
+    .icons i{
+        font-size: 1.1rem;
+    }
+
+    .icons i:hover{
+        font-size: 1.3rem;
+    }
+
+    .page{
+        font-size: 25px;
+    }
+
+    .prev, .next{
+        border-radius: 5px;
+        font-size: 25px;
+    }
+
+    .numbertext{
+        font-size: 12px;
+    }
+
+    .dot{
+        height: 10px;
+        width: 10px;
+    }
+
+    .scritta{
+        top:20px;
+    }
+}

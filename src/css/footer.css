@@ -1,0 +1,101 @@
+:root{
+    --text-color-f1: white;
+    --bg-color-f1: #212121;
+    --bg-color-f2: #525252;
+}
+
+footer{
+    width: 100%;
+    background-color: var(--bg-color-f1);
+
+    box-shadow: 0 -10px 18px 0 var(--bg-color-f2);
+
+    font-size: var(--font-size-low);
+    font-weight: 600;
+
+    color: var(--text-color-f1);
+}
+
+.content-menu{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+
+    padding: 3.3rem;
+}
+
+.content li, h1{
+    margin-bottom: 15px;
+}
+
+.content li a{
+    display: block;
+    color: var(--text-color-f1);
+    transition: all .40s ease;
+}
+
+.content li:hover{
+    transform: translateX(-10px);
+    cursor: pointer;
+}
+
+.social{
+    text-align: center;
+    font-size:40px;
+    padding: 0 0 30px 0;
+}
+
+.social a{
+    color: white;
+    padding: 20px;
+}
+
+#location{
+    cursor: default;
+}
+
+#instagram:hover{
+    color: rgb(124, 40, 112);
+    transform: translateY(-3px);
+}
+
+
+#facebook:hover{
+    color: rgb(121, 121, 216);
+    transform: translateY(-3px);
+}
+
+
+#twitter:hover{
+    color: rgb(78, 155, 176);
+    transform: translateY(-3px);
+}
+
+.last{
+    text-align: center;
+
+    background-color: var(--bg-color-f2);
+
+    padding: 20px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+@media(max-width: 1000px){
+
+    footer{
+        font-size: 0.9rem;
+    }
+
+    .content-menu{
+        padding: 2rem 0.5rem;
+    }
+
+    .last{
+        padding: 5px;
+    }
+}
+

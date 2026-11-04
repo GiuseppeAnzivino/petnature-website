@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --text-color-h1: black;
+    --bg-color-h1: white;
+    --bg-color-h2: #007BA7;
+    --font-size-low: 1.1rem;
+    --font-size-great:2.2rem;
+}
+
+body{
+    margin: 0 auto;
+    overflow-x: hidden;
+    animation: fade-start 1.5s ease-in-out forwards;
+}
+
+header{
+    display: flex;
+    align-items: center;
+
+    width: 100%; 
+
+    box-shadow: 10px 0 18px 0 #525252;
+
+    z-index: -1;
+
+    transition: all .3s;
+}
+
+.logo{
+    margin:0;
+    font-size: var(--font-size-great);
+    flex-grow: 2.5;
+    display: flex;
+}
+
+.logo a{
+    color: var(--text-color-h1);
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 100px;
+}
+
+
+.menu-container{
+    flex-grow: 5;
+    display: none;
+}
+
+#menu-icon{
+    color: var(--text-color-h1);
+    z-index: 1001;
+}
+
+.navbar{
+    display: flex;
+    flex-grow: 5;
+}
+
+.navbar a{
+    color: var(--text-color-h1);
+    font-size: var(--font-size-low);
+    font-weight: 600;
+    padding: 1.0rem;
+    transition: all .40s ease;
+}
+
+.navbar a:hover{
+    /*
+    border-bottom: #174d5a solid 2px;
+    */
+    background-color: var(--bg-color-h2);
+    color: var(--bg-color-h1);
+    
+}
+
+.icons{
+    display: block;
+    flex-grow: 2;
+}
+
+.icons i{
+    color: black;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.icons i:hover{
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+@media(max-width: 1000px){
+
+    .menu-container{
+        display: flex;
+    }
+
+    #menu-icon{
+        flex-grow: 0;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .logo{
+        font-size:1.6rem;
+        flex-grow: 3;
+    }
+
+    .logo img{
+        width: 60px;
+    }
+    
+    .navbar{
+        top: -500px;
+        z-index: 1;
+        left:0;
+        right:0;
+        position: absolute;
+        flex-direction: column;
+        background: var(--bg-color-h1);
+        transition: all 0.40s ease;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .navbar a{
+        display: inline-block;
+        width: 80%;
+        text-align: left;
+    }
+
+    .navbar.active{
+        top: 60px;
+    }
+
+    .icons i{
+        font-size: 1.1rem;
+    }
+
+    .icons i:hover{
+        font-size: 1.3rem;
+    }
+
+    .scritta{
+        top: 15px;
+    }
+}

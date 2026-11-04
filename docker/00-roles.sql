@@ -1,0 +1,1 @@
+CREATE ROLE www LOGIN PASSWORD 'www';

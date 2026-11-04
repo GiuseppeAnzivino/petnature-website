@@ -1,0 +1,57 @@
+:root{
+    --bg-color-1: white;
+    --bg-color-2: #007BA7;
+    --text-color-1: black;
+    --text-color-2: white;
+    --font-low: 1.1rem;
+    --font-great: 2.2rem;
+    --height-img-max: 250px;
+    --dimension-box: 400px;
+}
+
+section{
+    display: grid;
+    margin: 20px;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.cart{
+    font-size: 40px;
+    color: var(--bg-color-2);
+}
+
+.vuoto{
+    font-size: larger;
+    font-weight: bold;
+}
+
+th{
+    color: var(--bg-color-2);
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+td .table{
+    font-size: 20px;
+}
+
+button{
+    background: none;
+    border: none;
+    width: 100%;
+    font-size: large;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: .3s;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: var(--bg-color-2);
+    color: var(--bg-color-1);
+}

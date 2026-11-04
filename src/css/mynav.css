@@ -1,0 +1,56 @@
+:root{
+    --text-color-nav1: black;
+    --text-color-nav2: #818181;
+}
+
+.overlay{
+    position:fixed;
+    height: 100%;
+    width: 0px;
+    top: 100px;
+    right: 0px;
+    z-index: 1001;
+    background-color: var(--bg-color-h1);
+    margin: 0;
+    transition: 0.5s;
+}
+
+.overlay-content{
+    position: relative;
+    top: 25%;
+    text-align: center;
+    color: var(--text-color-nav1);
+    font-size: var(--font-size-low);
+    margin-top: 30px;
+    transition: 0.3s;
+}
+
+.overlay .campi{
+
+    text-decoration: none;
+
+    padding: 20px;
+    margin: 0;
+}
+
+.overlay .inout{
+    color: var(--text-color-nav2);
+}
+
+.overlay a:hover{
+    color: var(--text-color-nav1);
+}
+
+.overlay .closebtn{
+    position: relative;
+    left: 60px;
+    font-size: 60px;
+    text-decoration: none;
+    color: var(--text-color-nav2);
+    cursor: pointer;
+}
+
+.overlay.active{
+    right:0;
+    width: 300px;
+}
